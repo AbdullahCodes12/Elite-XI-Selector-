@@ -1,0 +1,477 @@
+:root {
+    --primary-color: #3498db;
+    --hover-color: #2980b9;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#home-section {
+    /*background-color: #25b79f; */
+    background: linear-gradient(to right,rgba(0,0,0,0.7),rgba(90, 89, 89, 0.7)), url('https://c0.wallpaperflare.com/preview/274/209/252/india-gumma-hpca-cricket-stadium.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    clip-path: ellipse(100% 100% at 50% 50%);
+    border-bottom-right-radius: 40%;
+    color: #fff;
+    padding: 40px 80px;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+#home-section header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
+#home-section .home-content {
+    margin-top: 30px;
+}
+
+
+
+.recommendation-container {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(135deg, #152129, #2ecc97, #197941 ); /* Added the background gradient here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* This will curve the top right corner of the container */
+    
+    overflow: auto; /* This will hide the overflowing part of the image */
+}
+.stats-container{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(135deg, #152129, #0640bb, #358df1 ); /* Added the background gradient here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     /* This will curve the top right corner of the container */
+    overflow: auto; /* This will hide the overflowing part of the image */
+    height: 500px;
+ 
+}
+
+.stats-table-container{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(135deg, #152129, #0640bb, #358df1 ); /* Added the background gradient here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     /* This will curve the top right corner of the container */
+    overflow: auto; /* This will hide the overflowing part of the image */
+    height: 800px;
+ 
+}
+
+.stats-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.stats-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.stats-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+
+
+/*#recommendation-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px; /* Adjust width as per your requirement */
+   /* background: linear-gradient(to right,rgba(0,0,0,0.7),rgba(90, 89, 89, 0.7)), url('https://e0.pxfuel.com/wallpapers/641/88/desktop-wallpaper-shoaib-akhtar-thumbnail.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    display: flex;
+    justify-content: space-between; /* This will space the items at both ends */
+    
+    align-items: center;
+    height: 64px;
+    padding: 0 20px; /* Added padding to give some space on the left and right */
+}
+
+.project-name {
+    color: #f0f0e6;
+    font-size: 2rem;
+    margin-right: auto;
+    margin-top: 110px; /* This will move the project name to the right */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+   
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end; /* Align the list items to the right */
+    width: 100%; /* Ensure the list takes the full width of its container */
+    padding-right: 20px; 
+}
+
+.nav-button {
+    color: #f0f0e6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.nav-button:hover {
+    background-color: transparent;
+    color: inherit; 
+    border-bottom: 2px solid #f0f0e6;
+    text-decoration: none; 
+}
+
+
+.page-section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+
+/* Existing style - no changes here */
+
+/* New style for the top dropdowns */
+.top-dropdowns {
+    margin-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.top-dropdowns .dropdown {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    width: 20%; /* Adjust this value to make sure the buttons line up correctly */
+}
+
+.topp-dropdowns {
+    margin-left: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.topp-dropdowns .dropdown {
+    flex: 0 0 200px; /* flex-grow: 0, flex-shrink: 0, flex-basis: 200px */
+    margin: 0 10px;
+    text-align: center;
+}
+
+
+
+.middle-dropdowns, .middle-dropdowns2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%; /* Adjust this value to make sure the buttons line up correctly */
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.middle-dropdowns {
+    margin-left: 570px; /* Adjust this value to align under the Select Opponent button */
+}
+
+.middle-dropdowns2 {
+    margin-right: 210px; /* Adjust this value to align under the Select Batting Features button */
+}
+
+
+/* Style adjustment for individual dropdowns */
+.dropdown {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    width:20%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+
+/* Ensure the .navbar doesn't overlap content below due to its fixed position */
+#home-section .home-content {
+    padding-top: 100px; /* Add padding to push content below the navbar */
+}
+
+
+.recommendation-button, .bot-dropdowns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.bot-dropdowns{
+    margin-left: 250px;
+    margin-top: 40px;
+}
+.stats-heading-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Add this if you need to move the title to the right/left by a specific amount */
+.stats-heading-container h1 {
+    margin-left: 370px; /* Adjust this to move right */
+    /* margin-right: 50px; Adjust this to move left */
+}
+
+.heading-container h2 {
+    margin-left: 335px; /* Adjust this to move right */
+    /* margin-right: 50px; Adjust this to move left */
+}
+
+/* Optional: Adjust the width and margin for better alignment */
+
+/* This will adjust the width of the Select Team Composition button */
+.dropdown-menu.teamCompositionDropdown {
+    width: 10%;  /* Adjust this value as needed */
+}
+
+/* Adjusts the width of the Reserve Player Spots button */
+.dropdown.reserve-player {
+    width: 25%;  /* Adjust this value as needed */
+}
+
+
+.btn-primary {
+    background-color: transparent !important;
+    border: 2px solid #fff !important; /* White border */
+    border-radius: 10px !important; /* Rounded corners */
+    color: #fff !important; /* White text */
+    font-size: 0.8em !important; /* Adjusted font size */
+    padding: 10px 20px !important; /* Adjusted padding */
+    min-width: 100px; /* Added min-width to ensure buttons have a sufficient width */
+    white-space: normal;
+    text-decoration: none !important;
+    display: inline-block; /* Added to ensure padding and min-width apply correctly */
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: rgba(36, 46, 25, 0.288) !important;
+    color: rgb(255, 255, 255) !important;
+    border-color: rgba(205, 220, 248, 0.897) !important; /* Adjust border color on hover/focus */
+}
+
+.btn-primary, .btn-primary:focus {
+    border: 2px solid #fff !important; /* White border */
+    border-radius: 20px !important; /* Rounded corners */
+    outline:#333 !important;
+    box-shadow: none !important;
+}
+
+.recommendation-button {
+    width: 25%; /* Adjust this value based on the width of the other buttons */
+    margin-left: 550px; /* This will center the button */
+}
+
+#getTeamRecommendation {
+    width: 500px; /* This will make the button take the full width of its container */
+    display: block; /* This changes the button from inline to block level, allowing width to work */
+}
+
+
+/*.btn-primary {
+    text-decoration:solid !important;
+    color: black !important;
+}*/
+
+h1, h2 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #fff !important; /* Set to white with !important to override other styles */
+    font-weight: 700;
+    font-size: 3em !important;
+    text-align: center;
+    margin-bottom: 60px !important;
+}
+
+h2 {
+    color: #fff !important; /* Set to white with !important to override other styles */
+    font-weight: 600;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 445px;
+    text-align: center; /* Center the text */
+    margin-left: 0; /* Remove the left margin */
+}
+
+
+/*.feature-section {
+    margin: 20px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}*/
+
+#team-recommendations {
+    border: 1px solid #ddd;
+    color: #fff; 
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: box-shadow var(--transition-speed);
+    text-align: center;
+    max-width: 80%; /* Adjusted to reduce the width */
+    
+    min-height: 280px; 
+}
+
+#team-recommendations:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    border-radius: 5px;
+    opacity: 0.8;
+    max-height: 300px; /* Adjust as needed for your design */
+    overflow-y: auto;
+
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    color: #000; /* Adding this line to make the text color black */
+}
+
+.dropdown-menu li:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+}
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4rem; /* Further increased font size */
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    padding: 10px; 
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000; 
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smoother color changes */
+  }
+  
+  .scroll-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff !important; /* Keeping the color white on hover */
+  }
+  
+  .scroll-arrow:active {
+    background-color: white !important; /* Change the background color to white on click */
+    color: black !important; /* Change the arrow color to black on click */
+  }
+
+  #batting-stats-table {
+    color: white; /* Set text color to white */
+    margin-left: 40px; /* Add left margin as needed */
+}
+#stats-displaying-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: for visual distinction */
+    color: white;
+}
+
+.stats-display {
+    margin-bottom: 20px; /* Space between tables */
+}
+
+/* Styles for tables (if needed) */
+/* Style for bowling stats table */
+#bowling-stats-table {
+    color: white; /* Set text color to white */
+    margin-left: 40px; /* Add left margin as needed */
+}
+
+#batting-stats-table, #bowling-stats-table {
+    width: calc(100% - 40px); /* Adjust the width to take the margin into account */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+

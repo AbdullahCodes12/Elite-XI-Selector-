@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Player Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section id="home-section">
+    <header>
+        <div class="navbar">
+            <p class="project-name">Elite XI Selector</p>
+    </div>
+            <nav>
+                <ul>
+                    <li><a href="#stats-displaying-section" class="nav-button"></a></li>
+                    <li><a href="#stats-viewing-section" class="nav-button">Stats</a></li>
+                    <li><a href="#team-recommendation-section" class="nav-button">Complete Team Recommendations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="home-content">
+        <!-- Some information about cricket goes here -->
+
+    </div>
+    <a href="#team-recommendation-section" class="scroll-arrow">↓</a>
+</section>
+<!--<div class="container">-->
+<div class="recommendation-container">
+<!-- Batsmen Recommendation Section -->
+<section id="team-recommendation-section">
+    <div class="stats-heading-container">
+    <h1>Complete Team Recommendations</h1>
+</div>
+    <!-- Dropdown for Selecting User Team -->
+    <div class="top-dropdowns">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Your Team
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" id="userTeamDropdownTeam"> <!-- Updated ID -->
+            <!-- JS will populate this -->
+        </ul>
+    </div>
+
+    <!-- Dropdown for Selecting Opponent -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Opponent
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" id="opponentDropdownTeam"> <!-- Updated ID -->
+            <!-- JS will populate this -->
+        </ul>
+    </div>
+
+    <!-- Dropdown for Selecting Host -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Host
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" id="hostDropdownTeam"> <!-- Updated ID -->
+            <!-- JS will populate this -->
+        </ul>
+    </div>
+
+    <!-- Dropdown for Team Composition -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Player Span
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="spanDropdownTeam">
+            <!-- JavaScript will populate this -->
+        </ul>
+    </div>
+
+    <!-- Dropdown for All-Rounder Primary Role -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            All-Rounder Primary Role
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="arPrimaryRoleDropdown">
+            <!-- JavaScript will populate this -->
+        </ul>
+    </div>
+    </div>
+<div class="middle-dropdowns">
+    <!-- Input fields for number of batsmen, bowlers, and all-rounders (not fully implemented in provided code) -->
+    <div class="dropdown team-composition">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Team Composition
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="teamCompositionDropdown">
+            <li>
+                <label for="numBatsmenTeam">Number of Batsmen:</label>
+                <input type="number" id="numBatsmenTeam" >
+            </li>
+            <li>
+                <label for="numBowlersTeam">Number of Bowlers:</label>
+                <input type="number" id="numBowlersTeam" >
+            </li>
+            <li>
+                <label for="numAllRoundersTeam">Number of All-rounders:</label>
+                <input type="number" id="numAllRoundersTeam">
+            </li>
+            <!-- Removed wicket keeper count -->
+        </ul>
+    </div>
+    
+</div>
+
+    <!-- Get Recommendation Button -->
+    <div class="recommendation-button">
+        <button id="getTeamRecommendation" class="btn btn-primary">Get Player Recommendations</button>
+    </div>
+    <section>
+        <div class="heading-container">
+        <h2>Recommended Players:</h2>
+    </div>
+    <div id="team-recommendations" class="recommendations">
+        <!-- Team recommendations will be displayed here -->
+    </div>
+   
+    
+</section>
+
+</div>
+<div class="stats-container">
+
+    <section id="stats-viewing-section">
+        <div class="stats-heading-container">
+        <h1>Player Stats Viewing System</h1>
+    </div>
+        <!-- Dropdown for Selecting Batting or Bowling Stats -->
+        <div class="topp-dropdowns">
+       <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Batting/Bowling
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="statsTypeDropdown">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+    
+        <!-- Dropdown for Selecting Team -->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Team
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="teamDropdown">
+                <!-- Populate with teams -->
+            </ul>
+        </div>
+    
+        <!-- Dropdown for Selecting Host or Opponent -->
+    
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Host/Opponent
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="hostOrOpponentDropdown">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+    
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select host/opponent
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="hostoroppselectionDropdown">
+                <!-- Populate with teams -->
+            </ul>
+        </div>
+    </div>
+    <div class="bot-dropdowns">
+        <!-- Get Stats Button -->
+        <button id="getStatsButton" class="btn btn-primary">Get Stats</button>
+        <div id="player-stats" class="stats-display">
+        </div>
+    </div>
+   </div>
+
+</section>
+<div class="stats-table-container">
+<section id="stats-displaying-section">
+
+        <div id="batting-stats" class="stats-display" style="display: none;">
+            <table id="batting-stats-table" class="table table-bordered">
+                <!-- ... Table headings for batting stats ... -->
+                <thead>
+                    <tr> 
+            
+                    <th>Player</th> 
+                    <th>Team</th>
+                    <th>Role</th>
+                    <th>Span</th>
+                    <th>Matches</th>
+                    <th>Not Outs</th>
+                    <th>Runs</th>
+                    <th>HS</th>
+                    <th>Batting_Ave</th>
+                    <th>Balls Faced</th>
+                    <th>SR</th>
+                    <th>Centuries</th>
+                    <th>Fifties</th>
+                    <th>Ducks</th>
+                    <th>Fours</th>
+                    <th>Sixes</th>
+                    <!-- Add other headers based on the statistics you want to show -->
+                    </tr>
+                    </thead>
+                    <tbody id="stats-table-body">
+                    <!-- Player stats will be inserted here by the displayPlayerStats function -->
+                    </tbody>
+            </table>
+        </div>
+            
+
+            <!-- Bowling Stats Table -->
+<div id="bowling-stats" class="stats-display" style="display: none;">
+    <table id="bowling-stats-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <!-- ... Table headings for bowling stats ... -->
+
+                <th>Player</th> 
+                <th>Team</th>
+                <th>Role</th>
+                <th>Span</th>
+                <th>Overs</th> 
+                <th>Mdns</th>
+                <th>Runs_given</th>
+                <th>Wkts</th>
+                <th>Bowling_Ave</th> 
+                <th>Econ</th>
+                <th>Bowling_SR</th>
+                <th>4W</th>
+                <th>5W</th> 
+                
+            </tr>
+        </thead>
+        <tbody id="bowling-stats-table-body">
+            <!-- Bowling stats will be inserted here -->
+        </tbody>
+    </table>
+</div>
+            
+        
+        
+        
+    </section>
+</div>
+    
+
+
+<!--</div>-->
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // This line is removed to ensure dropdown functionality works.
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scriptsstats.js') }}"></script>
+</body>
+
+</html>
